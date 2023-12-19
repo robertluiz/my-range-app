@@ -1,0 +1,59 @@
+
+.rangeContainer {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.rangeLine {
+    top: 10px;
+    height: 5px;
+    width: 100%;
+    background-color: #ccc;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.handle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.handle:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.handle.dragging {
+    transform: scale(1.5);
+    cursor: grabbing;
+}
+
+.minHandle {
+    left: 0;
+}
+
+.maxHandle {
+    right: 0;
+}
+
+.valuesContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.valuesContainer span {
+    cursor: pointer;
+}
+
